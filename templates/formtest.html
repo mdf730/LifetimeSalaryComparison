@@ -1,0 +1,40 @@
+$def with (offer1, offer2, details)
+
+<html>
+	<head>
+	    
+	    <title>Test</title>
+	    <meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="static/main.css" type="text/css" media="screen" charset="utf-8"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	</head>
+	<body>
+
+		<form name="main" method="post" class="center"> 
+			<h4><em><strong>Calcuate total potential earnings:</strong></em></h4>
+
+			$if not offer1.valid: <p class="error">Error:</p>
+			<div class="row">
+				<div class="col-sm-6">
+					<h5>Offer 1</h5>
+					$:offer1.render()
+				</div>
+				<div class="col-sm-6">
+					<h5>Offer 2</h5>
+					$:offer2.render()
+				</div>
+				<div class="col-sm-12">
+					<h5>Details</h5>
+					$:details.render()
+				</div>
+			</div>
+			
+			<input type="submit" />
+		</form>
+
+	</body>
+</html>
