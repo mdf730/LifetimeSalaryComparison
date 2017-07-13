@@ -10,7 +10,35 @@ $def with (offer1, offer2, details)
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+		<style type="text/css">
+			form.center{
+				background-color: lightgreen;
+				position: absolute;
+				left: 50%;
+				top: 30%;
+				margin-right: -50%;
+				padding: 25px;
+				text-align: center;
+				border: solid;
+				transform: translate(-50%, -50%);
+			}
+			.row{
+				background-color: lightblue;
+				border: solid;
+				padding: 10px;
+				margin-bottom: 2%;
+			}
+			.col-sm-12.center{
+				background-color: yellow;
+				border: solid;
+				left: 33%;
+				width: 33%;
+				padding: 10px;
+			}
+			.col-sm-6.offer{
+				margin-bottom: 2%;
+			}
+		</style>
 	</head>
 	<body>
 
@@ -19,15 +47,15 @@ $def with (offer1, offer2, details)
 
 			$if not offer1.valid: <p class="error">Error:</p>
 			<div class="row">
-				<div class="col-sm-6">
+				<div class="col-sm-6 offer">
 					<h5>Offer 1</h5>
 					$:offer1.render()
 				</div>
-				<div class="col-sm-6">
+				<div class="col-sm-6 offer">
 					<h5>Offer 2</h5>
 					$:offer2.render()
 				</div>
-				<div class="col-sm-12">
+				<div class="col-sm-12 center">
 					<h5>Details</h5>
 					$:details.render()
 				</div>
