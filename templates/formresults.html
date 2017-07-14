@@ -6,14 +6,42 @@ $def with (difference)
 	    <title>Test</title>
 	    <meta charset="utf-8">
   		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="static/main.css" type="text/css" media="screen" charset="utf-8"/>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<style type="text/css">
+			.row.center{
+				background-color: lightgreen;
+				position: absolute;
+				left: 50%;
+				top: 30%;
+				margin-right: -50%;
+				padding: 25px;
+				text-align: center;
+				border: solid;
+				transform: translate(-50%, -50%);
+			}
+			.row{
+				background-color: lightblue;
+				border: solid;
+				padding: 10px;
+				margin-bottom: 2%;
+			}
+			.col-sm-12.center{
+				background-color: yellow;
+				border: solid;
+				left: 33%;
+				width: 33%;
+				padding: 10px;
+			}
+			.col-sm-6.offer{
+				margin-bottom: 2%;
+			}
+		</style>
 
 	</head>
 	<body>
-		<div class="row">
+		<div class="row center">
 			<div class="col-sm-12">
 				Results:
 				$:difference
