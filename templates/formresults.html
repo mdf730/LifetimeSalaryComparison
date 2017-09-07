@@ -1,4 +1,4 @@
-$def with (difference)
+$def with (difference, high, low)
 
 <html>
 	<head>
@@ -20,6 +20,7 @@ $def with (difference)
 				text-align: center;
 				border: solid;
 				transform: translate(-50%, -50%);
+				font-size: 150%;
 			}
 			.row{
 				background-color: lightblue;
@@ -37,15 +38,35 @@ $def with (difference)
 			.col-sm-6.offer{
 				margin-bottom: 2%;
 			}
+			input[type=submit] {
+				background-color: #b6483f;
+				color: white;
+				margin: auto;
+				margin-top: 10%;
+				padding: 5px;
+				display: block;
+				width: 20%;
+				height: 15%;
+				font-size: 150%;
+				border: 2px solid #670b04;
+				border-radius: 5px;
+			}
+			input[type=submit]:hover {
+				box-shadow: -5px 5px 2px rgba(0,0,0,0.3);
+			}
 		</style>
 
 	</head>
 	<body>
 		<div class="row center">
 			<div class="col-sm-12">
-				Results:
-				$:difference
+				$:high
+				will pay you
+				<b> $:difference </b>
+				more over the rest of your career than
+				$:low
 			</div>
+			<input type="submit" value="Back" onclick="history.back()">
 		</div>
 	</body>
 </html>
